@@ -1,0 +1,31 @@
+body {
+    background-color: #2e2e2e;
+    color: #e2e2e2;
+  }
+  
+  p {
+    position: relative;
+    font-family: 'Ubuntu mono', monospace;
+    color: #e2e2e2;
+    font-size: 72px;
+  }
+  
+  p::after {
+    content: "A sua dose diária de programação fullstack";
+    position: absolute;
+    background-color: #ffcc33;
+    top: 30px;
+    font-size: 28pt;
+    left: 30px;
+    width: 800px;
+    height: 40px;
+    color: #2e2e2e;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 500ms, transform 500ms;
+  }
+  
+  p:is(:hover, :focus)::after {
+    opacity: 1;
+    transform: translateY(70px);
+  }
